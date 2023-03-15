@@ -13,4 +13,5 @@ Imports:
 	dplyr,
 	xml2,
 	magrittr,
-	httr2
+	httr2,
+	readr
