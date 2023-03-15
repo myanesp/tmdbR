@@ -14,6 +14,6 @@ get_streaming_providers(id, type, country)
 \item{country}{\href{https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2}{ISO 3166 code}}
 }
 \description{
-Catch the id of the media you want to watcha and in which country,
+Catch the id of the media you want to watch and in which country,
 and this function will return the information
 }
