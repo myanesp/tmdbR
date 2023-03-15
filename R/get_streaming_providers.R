@@ -1,6 +1,6 @@
 #' Get the streaming provider for a given media
 #'
-#' Catch the id of the media you want to watcha and in which country,
+#' Catch the id of the media you want to watch and in which country,
 #' and this function will return the information
 #'
 #' @param id ID of the media
