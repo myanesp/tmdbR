@@ -6,33 +6,33 @@
 #' @param source Dataframe of origin
 #' @param details The terms (quoted) that you are looking for
 #' @examples
-#' add_detail(trending_movies, c("revenue", "budget"))
+#' add_detail(source, c("revenue", "budget"))
 #' @export
 
 add_detail <- function(source, details) {
-  
+  source <- source
   for (d in details) {
     source[[d]] <- NA
   }
-  
+
   for (i in seq_len(nrow(source))) {
-    
+
     media_type <- source[i, "media_type"]
     id <- source[i, "id"]
-    
+
     if (media_type == "movie") {
-      req <- request(Sys.getenv("tmdb_endpoint")) %>% 
+      req <- request(Sys.getenv("tmdb_endpoint")) %>%
         req_url_path_append("movie") %>%
-        req_url_path_append(id) %>% 
+        req_url_path_append(id) %>%
         req_url_query(api_key = Sys.getenv("api_key_tmdb"))
-      
-      resp_req <- req %>% 
+
+      resp_req <- req %>%
         req_perform()
-      
+
       resp_body_details <-
         resp_req %>%
         resp_body_json(simplifyVector = TRUE)
-      
+
       if (length(resp_body_details) > 0) {
         for (d in details) {
           if (is.data.frame(resp_body_details[[d]])) {
@@ -46,19 +46,19 @@ add_detail <- function(source, details) {
         }
       }
     } else if (media_type == "tv") {
-      
-      req <- request(Sys.getenv("tmdb_endpoint")) %>% 
+
+      req <- request(Sys.getenv("tmdb_endpoint")) %>%
         req_url_path_append("tv") %>%
-        req_url_path_append(id) %>% 
+        req_url_path_append(id) %>%
         req_url_query(api_key = Sys.getenv("api_key_tmdb"))
-      
-      resp_req <- req %>% 
+
+      resp_req <- req %>%
         req_perform()
-      
+
       resp_body_details <-
         resp_req %>%
         resp_body_json(simplifyVector = TRUE)
-      
+
       if (length(resp_body_details) > 0) {
         for (d in details) {
           if (is.data.frame(resp_body_details[[d]])) {
@@ -74,5 +74,5 @@ add_detail <- function(source, details) {
     }
   }
   source <- source %>% relocate(ends_with("path"), .after = last_col())
-  return(source)  
+  return(source)
 }

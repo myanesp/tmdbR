@@ -6,6 +6,9 @@
 \usage{
 transform_genres(source)
 }
+\arguments{
+\item{source}{Dataframe of origin}
+}
 \description{
 Add a column to the dataframe of your choice with the genres names and for
 not only having the IDs.

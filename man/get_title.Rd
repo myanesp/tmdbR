@@ -6,6 +6,11 @@
 \usage{
 get_title(id, type)
 }
+\arguments{
+\item{id}{ID of the media}
+
+\item{type}{Whether is a "movie" or a "tv" show.}
+}
 \description{
 Obtain the title for your movie or tv show of preferrance by searching
 by id.

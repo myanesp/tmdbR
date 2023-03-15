@@ -16,5 +16,5 @@ Request as many details as you want (revenue, cast, original language, ...)
 from media and add them to an existing dataframe.
 }
 \examples{
-add_detail(trending_movies, c("revenue", "budget"))
+add_detail(source, c("revenue", "budget"))
 }
