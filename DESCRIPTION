@@ -15,3 +15,9 @@ Imports:
 	magrittr,
 	httr2,
 	readr
+Depends:
+  dplyr,
+	xml2,
+	magrittr,
+	httr2,
+	readr
