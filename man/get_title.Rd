@@ -15,6 +15,3 @@ get_title(id, type)
 Obtain the title for your movie or tv show of preferrance by searching
 by id.
 }
-\examples{
-get_title(238, "movie")
-}

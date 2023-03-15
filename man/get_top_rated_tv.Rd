@@ -9,6 +9,3 @@ get_top_rated_tv()
 \description{
 The list will contain top rated TV shows from all times.
 }
-\examples{
-get_top_rated_tv()
-}

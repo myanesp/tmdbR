@@ -13,6 +13,3 @@ set_api_tmdb(file_path)
 Store your TMDB API as an environmental variable to start. The function
 will validate your API against TMDB servers, and check if it is right.
 }
-\examples{
-set_api_tmdb("token.txt")
-}

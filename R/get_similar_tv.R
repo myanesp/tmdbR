@@ -3,8 +3,6 @@
 #' A data frame with all the similar TV shows from the TV show you want.
 #'
 #' @param id The id of the TV show
-#' @examples
-#' get_similar_tv(1396)
 #' @export
 
 get_similar_tv <- function(id) {

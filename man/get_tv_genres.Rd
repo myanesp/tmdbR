@@ -9,6 +9,3 @@ get_tv_genres()
 \description{
 A matrix equivalence of genres ids and genres names for TV shows.
 }
-\examples{
-get_tv_genres()
-}

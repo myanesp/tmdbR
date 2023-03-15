@@ -13,6 +13,3 @@ transform_genres(df)
 Add a column to the dataframe of your choice with the genres names and for
 not only having the IDs.
 }
-\examples{
-transform_genres(trending_week)
-}

@@ -3,8 +3,6 @@
 #' A data frame with all the similar movies from the movie you want.
 #'
 #' @param id The id of the movie
-#' @examples
-#' get_similar_movies(238)
 #' @export
 
 get_similar_movies <- function(id) {

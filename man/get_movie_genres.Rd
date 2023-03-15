@@ -9,6 +9,3 @@ get_movie_genres()
 \description{
 A matrix equivalence of genres ids and genres names for movies.
 }
-\examples{
-get_movie_genres()
-}

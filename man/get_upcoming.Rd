@@ -10,6 +10,3 @@ get_upcoming()
 Movies that you will be able to watch in cinemas (or in your streaming
 service) in the couple following weeks.
 }
-\examples{
-get_upcoming()
-}

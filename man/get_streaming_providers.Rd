@@ -17,6 +17,3 @@ get_streaming_providers(id, type, country)
 Catch the id of the media you want to watcha and in which country,
 and this function will return the information
 }
-\examples{
-get_streaming_providers(238, "movie", "AR")
-}

@@ -5,8 +5,6 @@
 #'
 #' @param df Dataframe of origin
 #' @param type Whether is a "tv" show or a "movie".
-#' @examples
-#' get_streaming(top_tv, "tv")
 #' @export
 
 get_streaming <- function(df, type){

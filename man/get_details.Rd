@@ -17,6 +17,3 @@ get_details(id, type, details = NULL)
 Request as many details as you want (revenue, cast, original language, ...)
 from media and print them.
 }
-\examples{
-get_details(238, "movie", c("revenue", "budget"))
-}

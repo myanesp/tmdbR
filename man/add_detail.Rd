@@ -4,17 +4,14 @@
 \alias{add_detail}
 \title{Add media details to a given dataframe}
 \usage{
-add_detail(df, details)
+add_detail(origin, details)
 }
 \arguments{
-\item{df}{Dataframe of origin}
+\item{origin}{Dataframe of origin}
 
 \item{details}{The terms (quoted) that you are looking for}
 }
 \description{
 Request as many details as you want (revenue, cast, original language, ...)
 from media and add them to an existing dataframe.
-}
-\examples{
-add_detail(df, c("revenue", "budget"))
 }

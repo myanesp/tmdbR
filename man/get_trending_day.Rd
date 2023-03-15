@@ -9,6 +9,3 @@ get_trending_day()
 \description{
 Movies and TV shows that are trending today
 }
-\examples{
-get_trending_day()
-}

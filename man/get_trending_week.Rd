@@ -9,6 +9,3 @@ get_trending_week()
 \description{
 Movies and TV shows that are trending the last 7 days
 }
-\examples{
-get_trending_week()
-}

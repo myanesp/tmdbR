@@ -9,6 +9,3 @@ get_trending_movies()
 \description{
 A list of the top 20 trending movies, in real time.
 }
-\examples{
-get_trending_movies()
-}

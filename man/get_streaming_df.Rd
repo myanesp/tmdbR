@@ -14,6 +14,3 @@ If you have a cool dataframe with information about movies and TV shows,
 complement it with the place where you can watch them (currently,
 for USA and Spain). Through JustWatch.
 }
-\examples{
-get_streaming_df(trending_day)
-}

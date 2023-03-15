@@ -13,6 +13,3 @@ search_tmdb(query)
 Directly search for a given movie or a given actress from R and
 obtain the basic information about it.
 }
-\examples{
-search_tmdb("office")
-}

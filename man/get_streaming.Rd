@@ -15,6 +15,3 @@ get_streaming(df, type)
 If you have a dataframe with all movies or all TV show, you can extract
 the information with this function. Please, be advised that will be deprecated.
 }
-\examples{
-get_streaming(top_tv, "tv")
-}

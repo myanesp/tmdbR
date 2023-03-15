@@ -9,6 +9,3 @@ get_trending_tv()
 \description{
 A list of the top 20 trending TV shows, in real time.
 }
-\examples{
-get_trending_tv()
-}

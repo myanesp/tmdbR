@@ -9,6 +9,3 @@ get_in_cinemas()
 \description{
 Movies you can watch on cinemas right now.
 }
-\examples{
-get_in_cinemas()
-}

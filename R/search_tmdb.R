@@ -4,8 +4,6 @@
 #' obtain the basic information about it.
 #'
 #' @param query A string to search
-#' @examples
-#' search_tmdb("office")
 #' @export
 
 search_tmdb <- function(query) {

@@ -9,6 +9,3 @@ get_top_rated_movies()
 \description{
 The list will contain top rated movies from all times.
 }
-\examples{
-get_top_rated_movies()
-}

@@ -12,6 +12,3 @@ get_similar_tv(id)
 \description{
 A data frame with all the similar TV shows from the TV show you want.
 }
-\examples{
-get_similar_tv(1396)
-}

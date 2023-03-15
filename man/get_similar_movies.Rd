@@ -12,6 +12,3 @@ get_similar_movies(id)
 \description{
 A data frame with all the similar movies from the movie you want.
 }
-\examples{
-get_similar_movies(238)
-}

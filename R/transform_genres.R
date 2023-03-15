@@ -3,8 +3,6 @@
 #' Add a column to the dataframe of your choice with the genres names and for
 #' not only having the IDs.
 #' @param df Dataframe of origin
-#' @examples
-#' transform_genres(trending_week)
 #' @export
 
 transform_genres <- function(df) {
