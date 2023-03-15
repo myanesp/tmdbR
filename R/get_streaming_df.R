@@ -4,20 +4,20 @@
 #' complement it with the place where you can watch them (currently,
 #' for USA and Spain). Through JustWatch.
 #'
-#' @param source Dataframe of origin
+#' @param df Dataframe of origin
 #' @examples
 #' get_streaming_df(trending_day)
 #' @export
 
-get_streaming_df <- function(source) {
+get_streaming_df <- function(df) {
   
-  source <- source %>% 
+  df <- df %>% 
     mutate(streaming_es = NA, streaming_us = NA)
   
-  for (i in seq_len(nrow(source))) {
+  for (i in seq_len(nrow(df))) {
     
-    media_type <- source[i, "media_type"]
-    id <- source[i, "id"]
+    media_type <- df[i, "media_type"]
+    id <- df[i, "id"]
     
     if (media_type == "movie") {
       
@@ -40,15 +40,15 @@ get_streaming_df <- function(source) {
       streaming_providers_us <- resp_body_streaming$results$US$flatrate$provider_name
       
       if (length(streaming_providers_us) > 0) {
-        source[i, "streaming_us"] <- paste(streaming_providers_us, collapse = ", ")
+        df[i, "streaming_us"] <- paste(streaming_providers_us, collapse = ", ")
       } else {
-        source[i, "streaming_us"] <- "NA"
+        df[i, "streaming_us"] <- "NA"
       }
       
       if (length(streaming_providers_es) > 0) {
-        source[i, "streaming_es"] <- paste(streaming_providers_es, collapse = ", ")
+        df[i, "streaming_es"] <- paste(streaming_providers_es, collapse = ", ")
       } else {
-        source[i, "streaming_es"] <- "NA"
+        df[i, "streaming_es"] <- "NA"
       }
       
     } else if (media_type == "tv") {
@@ -72,15 +72,15 @@ get_streaming_df <- function(source) {
       streaming_providers_us <- resp_body_streaming$results$US$flatrate$provider_name
       
       if (length(streaming_providers_us) > 0) {
-        source[i, "streaming_us"] <- paste(streaming_providers_us, collapse = ", ")
+        df[i, "streaming_us"] <- paste(streaming_providers_us, collapse = ", ")
       } else {
-        source[i, "streaming_us"] <- "NA"
+        df[i, "streaming_us"] <- "NA"
       }
       
       if (length(streaming_providers_es) > 0) {
-        source[i, "streaming_es"] <- paste(streaming_providers_es, collapse = ", ")
+        df[i, "streaming_es"] <- paste(streaming_providers_es, collapse = ", ")
       } else {
-        source[i, "streaming_es"] <- "NA"
+        df[i, "streaming_es"] <- "NA"
       }
       
     } else {
@@ -91,5 +91,5 @@ get_streaming_df <- function(source) {
     
   }
   
-  return(source)
+  return(df)
 }

@@ -3,22 +3,22 @@
 #' Request as many details as you want (revenue, cast, original language, ...)
 #' from media and add them to an existing dataframe.
 #'
-#' @param source Dataframe of origin
+#' @param df Dataframe of origin
 #' @param details The terms (quoted) that you are looking for
 #' @examples
-#' add_detail(source, c("revenue", "budget"))
+#' add_detail(df, c("revenue", "budget"))
 #' @export
 
-add_detail <- function(source, details) {
-  source <- source
+add_detail <- function(df, details) {
+  df <- df
   for (d in details) {
-    source[[d]] <- NA
+    df[[d]] <- NA
   }
 
-  for (i in seq_len(nrow(source))) {
+  for (i in seq_len(nrow(df))) {
 
-    media_type <- source[i, "media_type"]
-    id <- source[i, "id"]
+    media_type <- df[i, "media_type"]
+    id <- df[i, "id"]
 
     if (media_type == "movie") {
       req <- request(Sys.getenv("tmdb_endpoint")) %>%
@@ -36,13 +36,13 @@ add_detail <- function(source, details) {
       if (length(resp_body_details) > 0) {
         for (d in details) {
           if (is.data.frame(resp_body_details[[d]])) {
-            source[i, d] <- paste0(resp_body_details[[d]][[1,1]], collapse = ", ")
+            df[i, d] <- paste0(resp_body_details[[d]][[1,1]], collapse = ", ")
           } else {
-            source[i, d] <- resp_body_details[[d]]
+            df[i, d] <- resp_body_details[[d]]
           }}
       } else {
         for (d in details) {
-          source[i, d] <- NA
+          df[i, d] <- NA
         }
       }
     } else if (media_type == "tv") {
@@ -62,17 +62,17 @@ add_detail <- function(source, details) {
       if (length(resp_body_details) > 0) {
         for (d in details) {
           if (is.data.frame(resp_body_details[[d]])) {
-            source[i, d] <- paste0(resp_body_details[[d]][[1,1]], collapse = ", ")
+            df[i, d] <- paste0(resp_body_details[[d]][[1,1]], collapse = ", ")
           } else {
-            source[i, d] <- resp_body_details[[d]]
+            df[i, d] <- resp_body_details[[d]]
           }}
       } else {
         for (d in details) {
-          source[i, d] <- NA
+          df[i, d] <- NA
         }
       }
     }
   }
-  source <- source %>% relocate(ends_with("path"), .after = last_col())
-  return(source)
+  df <- df %>% relocate(ends_with("path"), .after = last_col())
+  return(df)
 }

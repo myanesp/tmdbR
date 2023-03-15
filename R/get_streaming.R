@@ -3,18 +3,18 @@
 #' If you have a dataframe with all movies or all TV show, you can extract
 #' the information with this function. Please, be advised that will be deprecated.
 #'
-#' @param source Dataframe of origin
+#' @param df Dataframe of origin
 #' @param type Whether is a "tv" show or a "movie".
 #' @examples
 #' get_streaming(top_tv, "tv")
 #' @export
 
-get_streaming <- function(source, type){
-  source <- source %>%
+get_streaming <- function(df, type){
+  df <- df %>%
     mutate(streaming_es = NA, streaming_us = NA)
   if (type %in% c("tv", "movie")) {
-    for (i in source$id) {
-      idx <- which(source$id == i)
+    for (i in df$id) {
+      idx <- which(df$id == i)
       req <- request(Sys.getenv("tmdb_endpoint")) %>%
         req_url_path_append(type) %>%
         req_url_path_append(i) %>%
@@ -35,19 +35,19 @@ get_streaming <- function(source, type){
       streaming_providers_us <- resp_body_streaming$results$US$flatrate$provider_name
 
       if (length(streaming_providers_us) > 0) {
-        source$streaming_us[idx] <- paste(streaming_providers_us, collapse = ", ")
+        df$streaming_us[idx] <- paste(streaming_providers_us, collapse = ", ")
       } else {
-        source$streaming_us[idx] <- "NA"
+        df$streaming_us[idx] <- "NA"
       }
       if (length(streaming_providers_es) > 0) {
-        source$streaming_es[idx] <- paste(streaming_providers_es, collapse = ", ")
+        df$streaming_es[idx] <- paste(streaming_providers_es, collapse = ", ")
       } else {
-        source$streaming_es[idx] <- "NA"
+        df$streaming_es[idx] <- "NA"
       }
     }
-    source <- source %>%
+    df <- df %>%
       relocate(ends_with("path"), .after = last_col())
-    return(source)
+    return(df)
   } else {
     stop("Invalid type. It must be 'tv' or 'movie'.")
   }

@@ -4,10 +4,10 @@
 \alias{get_streaming}
 \title{Get the streaming provider for a movie or TV show}
 \usage{
-get_streaming(source, type)
+get_streaming(df, type)
 }
 \arguments{
-\item{source}{Dataframe of origin}
+\item{df}{Dataframe of origin}
 
 \item{type}{Whether is a "tv" show or a "movie".}
 }

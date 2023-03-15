@@ -4,10 +4,10 @@
 \alias{transform_genres}
 \title{Transform genres ids into genres names.}
 \usage{
-transform_genres(source)
+transform_genres(df)
 }
 \arguments{
-\item{source}{Dataframe of origin}
+\item{df}{Dataframe of origin}
 }
 \description{
 Add a column to the dataframe of your choice with the genres names and for

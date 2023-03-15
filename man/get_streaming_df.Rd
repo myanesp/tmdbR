@@ -4,10 +4,10 @@
 \alias{get_streaming_df}
 \title{Add the streaming providers for media in an existing dataframe}
 \usage{
-get_streaming_df(source)
+get_streaming_df(df)
 }
 \arguments{
-\item{source}{Dataframe of origin}
+\item{df}{Dataframe of origin}
 }
 \description{
 If you have a cool dataframe with information about movies and TV shows,
