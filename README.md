@@ -1,8 +1,10 @@
 # `tmdbR`: a package to interact and obtain data from The Movie DB using its API from R
 <!-- badges: start -->
 [![R-CMD-check](https://github.com/myanesp/tmdbR/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/myanesp/tmdbR/actions/workflows/R-CMD-check.yaml)
-[![CodeFactor](https://www.codefactor.io/repository/github/myanesp/tmdbR/badge)](https://www.codefactor.io/repository/github/myanesp/tmdbR)
+[![CodeFactor](https://www.codefactor.io/repository/github/myanesp/tmdbr/badge)](https://www.codefactor.io/repository/github/myanesp/tmdbr)
 [![](https://img.shields.io/github/languages/code-size/myanesp/tmdbR.svg)](https://github.com/myanesp/tmdbR)
+[![](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
+[![Project Status: Active - The project has reached a stable, usable state and is being actively developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
 <!-- badges: end -->
 
 ## What does this package do?
