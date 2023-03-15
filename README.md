@@ -40,10 +40,17 @@ As we strictly follow the parameters proposed by TMDB, take a look at [its docum
 
 ## Examples
 ``` r
-get_trending_movies() # returns a list of the top 20 trending movies
-search_tmdb("friends") # returns results that matches your search.
-transform_genres(trending_movies) # adds a new column called "genres" that has the name of the genres, instead of only having their id's.
-get_streaming_providers(238, "movie", "ES") # returns a list of available suscriptions platforms in Spain where you can watch The Godfather.
+# return a list of the top 20 trending movies
+get_trending_movies() 
+
+# return results that matches your search
+search_tmdb("friends") 
+
+# add a new column called "genres" that has the name of the genres, instead of only having their id's.
+transform_genres(trending_movies) 
+
+# return a list of available suscriptions platforms in Spain where you can watch The Godfather
+get_streaming_providers(238, "movie", "ES") 
 ```
 ## Roadmap
 
