@@ -3,7 +3,7 @@ Title: Connect to TMDB's API Directly From R
 Version: 0.0.1
 Authors@R: c(
     person("Mario", "Yanes", email="myanes@uc3m.es", role = c("aut", "cre")),
-    person("Isabela", "Zeberio", "isazeberio@email.com", role = "aut"))
+    person("Isabela", "Zeberio", "isabela.zeberio@alumnos.uc3m.es", role = "aut"))
 Description: With this R package, you can obtain data from TMDB using your API key directly from R.
 License: MIT
 Encoding: UTF-8
