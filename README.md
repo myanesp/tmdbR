@@ -1,4 +1,4 @@
-# `tmdbR`: a package to interact and obtain data from The Movie DB using its API from R
+# `tmdbR`: a package to interact with and obtain data from The Movie DB using its API from R
 <!-- badges: start -->
 [![R-CMD-check](https://github.com/myanesp/tmdbR/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/myanesp/tmdbR/actions/workflows/R-CMD-check.yaml)
 [![CodeFactor](https://www.codefactor.io/repository/github/myanesp/tmdbr/badge)](https://www.codefactor.io/repository/github/myanesp/tmdbr)
