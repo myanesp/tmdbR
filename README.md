@@ -2,7 +2,7 @@
 <!-- badges: start -->
 [![R-CMD-check](https://github.com/myanesp/tmdbR/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/myanesp/tmdbR/actions/workflows/R-CMD-check.yaml)
 [![CodeFactor](https://www.codefactor.io/repository/github/myanesp/tmdbR/badge)](https://www.codefactor.io/repository/github/myanesp/tmdbR)
-[![](https://img.shields.io/github/languages/code-size/myanesp/tmdbR.svg)](https://github.com/myanesp/tmdbR)"
+[![](https://img.shields.io/github/languages/code-size/myanesp/tmdbR.svg)](https://github.com/myanesp/tmdbR)
 <!-- badges: end -->
 
 ## What does this package do?
