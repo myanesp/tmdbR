@@ -14,7 +14,7 @@ set_api_tmdb <- function(file_path) {
 
   api_key <- read_file(file_path)
 
-  if (nchar(trimws(api_key)) != 32) {
+  if (length(api_key) != 1 || nchar(api_key) != 32) {
     stop("API key must be a 32 character string. Check your file and correct it.")
   }
   req <- request(Sys.getenv("tmdb_endpoint")) %>%
