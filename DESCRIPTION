@@ -1,11 +1,11 @@
 Package: tmdbR
 Title: Connect to TMDB's API Directly From R
-Version: 0.0.1
+Version: 0.1.1
 Authors@R: c(
     person("Mario", "Yanes", email="myanes@uc3m.es", role = c("aut", "cre")),
     person("Isabela", "Zeberio", "isabela.zeberio@alumnos.uc3m.es", role = "aut"))
 Description: With this R package, you can obtain data from TMDB using your API key directly from R.
-License: `use_mit_license()`
+License: MIT
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.2.3
