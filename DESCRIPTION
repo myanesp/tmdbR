@@ -1,6 +1,6 @@
 Package: tmdbR
 Title: Connect to TMDB's API Directly From R
-Version: 0.1.1
+Version: 0.1.2
 Authors@R: c(
     person("Mario", "Yanes", email="myanes@uc3m.es", role = c("aut", "cre")),
     person("Isabela", "Zeberio", "isabela.zeberio@alumnos.uc3m.es", role = "aut"))
