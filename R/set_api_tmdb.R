@@ -12,7 +12,7 @@ set_api_tmdb <- function(file_path) {
     stop("File must be a .txt")
   }
 
-  api_key <- read_file(file_path)
+  api_key <- read_file(file_path) %>% trimws()
 
   if (nchar(trimws(api_key)) != 32) {
     stop("API key must be a 32 character string. Check your file and correct it.")
